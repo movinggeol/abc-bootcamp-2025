@@ -14,7 +14,7 @@ def get_personality_analysis(face_desc: str) -> str: # 인자 문자열 -> 문�
     prompt += "\n 얼굴 특징 : " + face_desc
     
     # API_KEY = os.environ["OPENAI_API_KEY"]
-    client = OpenAI()  # OPENAI_API_KEY 환경변수 지정이 필요
+    client = OpenAI()  # OPENAI_API_KEY 환경변수 지정이 필요 (.env에 이 이름으로 환경변수를 만들어뒀다면 따로 지정하지 않아도 됨)
 
     #  OpenAI 모델로부터 응답(텍스트, JSON 등)을 생성하는 메서드입니다.
     # -> 텍스트, 이미지, 툴 등을 입력으로 주고 → 응답을 받아올 수 있는 인터페이스입니다.
