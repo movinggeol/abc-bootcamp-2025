@@ -19,7 +19,7 @@ face_desc = face_desc.strip()
 if st.button("관상 보기", type="primary"): # '버튼이 클릭되었음'에 대한 조건문
     if face_desc: # '문자열 있음'에 대한 조건문 (strip()으로 인해 좌우 공백이 제거되므로, 공백 제외 문자 존재 유무)
         with st.spinner("관상을 분석 중입니다..."):
-            result = get_personality_analysis(face_desc)
+            result = get_personality_analysis(face_desc) # 완전히 생성이 되어야만 값을 반환(5초 이후 완료된다면 0~4.9초 안에 반환값은 없음) (streaming 방식과 반대)
             st.write("----")
             st.write("관상 분석이 끝났습니다.")
             st.info(result)
